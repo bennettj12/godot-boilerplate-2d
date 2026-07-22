@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://00bxfurateyx"]
+
+[ext_resource type="Script" uid="uid://do0jx0pdwl1m1" path="res://state_manager.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=1441380367]
+
+[node name="World" type="Node2D" parent="." unique_id=490781849]
+
+[node name="StateManager" type="Node" parent="." unique_id=2033175226]
+process_mode = 3
+script = ExtResource("1_ig7tw")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1912944010]
+process_mode = 3
