@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://1u44lsoj8mu8"]
+
+[ext_resource type="Script" uid="uid://gsfchvhvn8c3" path="res://ui/menu.gd" id="1_menu"]
+
+[sub_resource type="Gradient" id="Gradient_bwjgb"]
+colors = PackedColorArray(0.1768, 0.21285333, 0.26, 1, 0.12070001, 0.12234333, 0.17, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_euvu1"]
+gradient = SubResource("Gradient_bwjgb")
+fill_from = Vector2(0.24347825, 0)
+fill_to = Vector2(0.70434785, 1)
+
+[sub_resource type="Gradient" id="Gradient_udkah"]
+colors = PackedColorArray(0.1533, 0.15897, 0.21, 0.74509805, 0.027999999, 0.0292, 0.04, 0.69411767)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oejne"]
+gradient = SubResource("Gradient_udkah")
+fill_from = Vector2(0.6652174, 0)
+fill_to = Vector2(0.37391305, 1)
+
+[node name="Menu" type="Control" unique_id=1103106506]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1294683852]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_euvu1")
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="." unique_id=1414706856]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -260.0
+offset_right = -264.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="MainMenuContainer" unique_id=1134855327]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Game Title"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="MainMenuContainer" unique_id=1977399068]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StartButton" type="Button" parent="MainMenuContainer" unique_id=514948666]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Start"
+
+[node name="SettingsButton" type="Button" parent="MainMenuContainer" unique_id=1351534375]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MainMenuContainer" unique_id=570803627]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Quit"
+
+[node name="SettingsPanel" type="TextureRect" parent="." unique_id=470708209]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 1088.0
+offset_bottom = 576.0
+texture = SubResource("GradientTexture2D_oejne")
+
+[node name="SettingsContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=994209324]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -160.0
+offset_right = 320.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsTitle" type="Label" parent="SettingsPanel/SettingsContainer" unique_id=1137629750]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="Spacer2" type="Control" parent="SettingsPanel/SettingsContainer" unique_id=811029284]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MasterRow" type="HBoxContainer" parent="SettingsPanel/SettingsContainer" unique_id=595355509]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="SettingsPanel/SettingsContainer/MasterRow" unique_id=1313792362]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="SettingsPanel/SettingsContainer/MasterRow" unique_id=1715315297]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MusicRow" type="HBoxContainer" parent="SettingsPanel/SettingsContainer" unique_id=1077758373]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="SettingsPanel/SettingsContainer/MusicRow" unique_id=1543821532]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/SettingsContainer/MusicRow" unique_id=1283257982]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXRow" type="HBoxContainer" parent="SettingsPanel/SettingsContainer" unique_id=464865542]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="SettingsPanel/SettingsContainer/SFXRow" unique_id=1714909802]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel/SettingsContainer/SFXRow" unique_id=1252673021]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Spacer3" type="Control" parent="SettingsPanel/SettingsContainer" unique_id=1280289267]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="SettingsPanel/SettingsContainer" unique_id=1347603799]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Back"

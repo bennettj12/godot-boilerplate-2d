@@ -8,7 +8,7 @@ signal before_quit
 ## Triggers before resetting the scene
 signal before_reset
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
 	if Input.is_action_just_pressed("reset"):

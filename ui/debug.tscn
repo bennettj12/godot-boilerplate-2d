@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://uixbnnch6ljo"]
+
+[ext_resource type="Script" uid="uid://cpfsty3jg4xnw" path="res://ui/debug.gd" id="1_f7xao"]
+
+[sub_resource type="SystemFont" id="SystemFont_f7xao"]
+font_names = PackedStringArray("Monospace")
+
+[node name="Debug" type="CanvasLayer" unique_id=553945809]
+process_mode = 3
+layer = 2
+script = ExtResource("1_f7xao")
+
+[node name="Label" type="Label" parent="." unique_id=1161538137]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 271.0
+offset_bottom = 622.0
+theme_override_fonts/font = SubResource("SystemFont_f7xao")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=513997159]
+offset_right = 289.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.19215687)
