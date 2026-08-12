@@ -1,6 +1,7 @@
 # Bennett's Godot 2D Project Boilerplate
 
 This is a small starter-project for 2d games in godot with some basic common features.
+When I work on new projects, I add things which feel general to this package.
 
 ## Features
 
