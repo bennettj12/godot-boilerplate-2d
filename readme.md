@@ -26,3 +26,5 @@ When I work on new projects, I add things which feel general to this package.
   * Health
   * Hitbox
   * Hurtbox
+* ShakeCamera2D: A 2d camera with an added trauma component. Currently hooks in to Events.global_trauma signal.
+* Trauma: A class which handles decaying a trauma value over time. It has two methods `sample1d` and `sample2d` which return offsets based on multiplying current trauma amount with a noise function. Adjusting decay and frequency allows for a range of movements from smooth random swinging or more rapid vibration. 
