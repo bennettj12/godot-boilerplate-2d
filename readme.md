@@ -3,6 +3,8 @@
 This is a small starter-project for 2d games in godot with some basic common features.
 When I work on new projects, I add things which feel general to this package.
 
+This project has git LFS set up for common audio/video/image/compressed file types.
+
 ## Features
 
 * Generic folder structure (probably change this for your game)
