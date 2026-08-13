@@ -16,7 +16,8 @@ var game_started := false
 func _ready() -> void:
 	if OS.get_name() == "Web":
 		quit_button.visible = false
-
+	settings_panel.modulate.a = 0
+	
 	start_button.pressed.connect(_on_start_pressed)
 	settings_button.pressed.connect(_on_settings_toggled)
 	quit_button.pressed.connect(_on_quit_pressed)
@@ -49,14 +50,14 @@ func _on_start_pressed() -> void:
 
 
 func _on_settings_toggled() -> void:
-	var on = not settings_panel.visible
+	var on := not settings_panel.visible
 	if on:
 		settings_panel.visible = on
 		create_tween().tween_property(settings_panel, "modulate:a", 1.0, 0.1)
 	else:
-		var t = create_tween()
+		var t := create_tween()
 		t.tween_property(settings_panel, "modulate:a", 0.0, 0.1)
-		t.finished.connect(func(): settings_panel.visible = on)
+		t.finished.connect(func() -> void: settings_panel.visible = on)
 
 
 func _on_quit_pressed() -> void:

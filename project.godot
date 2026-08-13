@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*uid://csmbb81vkpdya"
+Global="*uid://csmbb81vkpdya"
 Events="*uid://dt02onpnv7lu0"
 SFX="*uid://dmibxlox5n4xk"
 Debug="*uid://uixbnnch6ljo"

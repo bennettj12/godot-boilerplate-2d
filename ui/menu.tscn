@@ -36,61 +36,80 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_euvu1")
 
-[node name="MainMenuContainer" type="VBoxContainer" parent="." unique_id=1414706856]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=412896636]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -544.0
-offset_top = -260.0
-offset_right = -264.0
-offset_bottom = 252.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
 
-[node name="Title" type="Label" parent="MainMenuContainer" unique_id=1134855327]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=510991091]
+layout_mode = 2
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1414706856]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="MarginContainer/HBoxContainer/MainMenuContainer" unique_id=1134855327]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Game Title"
 horizontal_alignment = 1
 
-[node name="Spacer1" type="Control" parent="MainMenuContainer" unique_id=1977399068]
+[node name="Spacer1" type="Control" parent="MarginContainer/HBoxContainer/MainMenuContainer" unique_id=1977399068]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="StartButton" type="Button" parent="MainMenuContainer" unique_id=514948666]
+[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/MainMenuContainer" unique_id=514948666]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Start"
+flat = true
 
-[node name="SettingsButton" type="Button" parent="MainMenuContainer" unique_id=1351534375]
+[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/MainMenuContainer" unique_id=1351534375]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Settings"
+flat = true
 
-[node name="QuitButton" type="Button" parent="MainMenuContainer" unique_id=570803627]
+[node name="QuitButton" type="Button" parent="MarginContainer/HBoxContainer/MainMenuContainer" unique_id=570803627]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Quit"
+flat = true
+
+[node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer/MainMenuContainer" unique_id=1508162336]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="HSpacer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1371701447]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.63
 
 [node name="SettingsPanel" type="TextureRect" parent="." unique_id=470708209]
 unique_name_in_owner = true
 visible = false
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 320.0
-offset_top = 128.0
-offset_right = 1088.0
-offset_bottom = 576.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_oejne")
 
 [node name="SettingsContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=994209324]
@@ -176,3 +195,4 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Back"
+flat = true
