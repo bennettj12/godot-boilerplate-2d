@@ -18,8 +18,7 @@ func _init( \
 decay: float = 1.0, \
 frequency: float = 0.2, \
 noise_type: int = FastNoiseLite.TYPE_SIMPLEX) -> void:
-
-	_decay = decay
+	_decay = max(decay, 0.0)
 	trauma = 0.0
 	_noise = FastNoiseLite.new()
 	_noise.noise_type = (noise_type as FastNoiseLite.NoiseType)
