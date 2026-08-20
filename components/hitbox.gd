@@ -11,13 +11,13 @@ extends Area2D
 ## To hit things more than once.
 var entities_hit : Array[Node] = []
 
-@onready var time_remaining = lifetime
+@onready var time_remaining := lifetime
 
-func _ready():
+func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	collision_mask = 128
 
-func _on_area_entered(area: Area2D):
+func _on_area_entered(area: Area2D) -> void:
 	if not area is Hurtbox:
 		return
 	if area.owner == source: 
@@ -25,10 +25,10 @@ func _on_area_entered(area: Area2D):
 	if entities_hit.has(area.owner):
 		return
 	
-	area.take_damage(power)
+	(area as Hurtbox).take_damage(power)
 	entities_hit.append(area.owner)
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if permanent: 
 		return
 	

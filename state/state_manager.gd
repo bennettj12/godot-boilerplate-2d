@@ -9,7 +9,7 @@ func _input(_event: InputEvent) -> void:
 		quit_game()
 
 func toggle_pause() -> void:
-	get_tree().paused = get_tree().paused
+	get_tree().paused = not get_tree().paused
 
 func reset_game() -> void:
 	get_tree().reload_current_scene()
