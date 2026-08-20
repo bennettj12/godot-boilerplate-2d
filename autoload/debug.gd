@@ -28,4 +28,3 @@ func display(key: String, value: Variant) -> void:
 	full_text = ""
 	for k: String in logs.keys():
 		full_text += k + ":   "  + str(logs[k]) + "\n"
-	pass
