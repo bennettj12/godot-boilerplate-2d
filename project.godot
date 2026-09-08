@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Store="*uid://coc0fu7c1igf1"
 Global="*uid://csmbb81vkpdya"
 Events="*uid://dt02onpnv7lu0"
 SFX="*uid://dmibxlox5n4xk"
